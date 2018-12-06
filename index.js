@@ -1,0 +1,13 @@
+setTimeout(function(){
+    $('.init').removeClass('init')
+},200)
+$('.item').on('click',function(e){
+    e.stopPropagation();
+    $('.wrapper').addClass('inner');
+    $(this).addClass('active');
+})
+$('button').on('click',function(e){
+    e.stopPropagation();
+    $('.wrapper').removeClass('inner');
+    $('.active').removeClass('active');
+})
